@@ -17,3 +17,9 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+task doStuff() {
+    doFirst {
+        println("======= DOING THINGS! =======")
+    }
+}
