@@ -20,6 +20,11 @@ test {
 
 task doStuff() {
     doFirst {
-        println("======= DOING THINGS! =======")
+        println("======= ENV Vars =======")
+        System.getenv().each {
+            println(it.key + " = " + it.value)
+        }
+        println("========================")
+        println("Has Secret? " + (System.getenv("MY_SECRET") == "Secret Text!"))
     }
 }
